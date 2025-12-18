@@ -216,7 +216,7 @@ const Index = () => {
             <div className="space-y-4 text-muted-foreground">
               <p className="text-lg">Для сотрудничества и букинга:</p>
               <p className="text-2xl font-semibold text-foreground">vladlurren@gmail.com</p>
-              <p className="text-lg">+7 (999) 123-45-67</p>
+              <p className="text-lg"></p>
             </div>
           </div>
         </div>
