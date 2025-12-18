@@ -33,25 +33,28 @@ const Index = () => {
     element?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const concerts = [
-    { date: '15 января 2025', city: 'Москва', venue: 'Crocus City Hall', status: 'Билеты в продаже' },
-    { date: '22 января 2025', city: 'Санкт-Петербург', venue: 'А2 Green Concert', status: 'Билеты в продаже' },
-    { date: '28 января 2025', city: 'Казань', venue: 'Пирамида', status: 'Скоро в продаже' },
-    { date: '5 февраля 2025', city: 'Екатеринбург', venue: 'Дивс', status: 'Скоро в продаже' },
-  ];
+  const concerts: Array<{ message: string }> = [];
 
   const releases = [
-    { title: 'Новый альбом 2024', year: '2024', type: 'Альбом' },
-    { title: 'Летние ночи', year: '2023', type: 'Сингл' },
-    { title: 'Горизонт', year: '2023', type: 'EP' },
-    { title: 'Дебютный альбом', year: '2022', type: 'Альбом' },
+    { title: 'Мама', year: '2024', type: 'Сингл', cover: 'https://avatars.yandex.net/get-music-content/5234514/d4bb4517.a.24614809-1/400x400' },
+    { title: 'Летняя ночь', year: '2024', type: 'Сингл', cover: 'https://avatars.yandex.net/get-music-content/6213268/ba4f8cfc.a.24037734-1/400x400' },
+    { title: 'Танцы на крыше', year: '2024', type: 'Сингл', cover: 'https://avatars.yandex.net/get-music-content/6213296/18e0b80a.a.23824662-1/400x400' },
+    { title: 'Не звони', year: '2024', type: 'Сингл', cover: 'https://avatars.yandex.net/get-music-content/5234514/cc9f3e78.a.23628799-1/400x400' },
+    { title: 'Клубы', year: '2024', type: 'Сингл', cover: 'https://avatars.yandex.net/get-music-content/9857283/19a9f8b9.a.30350814-1/400x400' },
+    { title: 'В моей голове', year: '2023', type: 'Сингл', cover: 'https://avatars.yandex.net/get-music-content/6213296/4e1dbf25.a.22977056-1/400x400' },
+    { title: 'Танцуй пока молодая', year: '2023', type: 'Сингл', cover: 'https://avatars.yandex.net/get-music-content/5234514/0e4e8769.a.22585607-1/400x400' },
+    { title: 'Ща взорвусь', year: '2023', type: 'Сингл', cover: 'https://avatars.yandex.net/get-music-content/5234514/cc9f3e78.a.23628799-1/400x400' },
+    { title: 'Крейзи Джейн', year: '2023', type: 'Сингл', cover: 'https://avatars.yandex.net/get-music-content/6213296/5bc2f09b.a.21808644-1/400x400' },
+    { title: 'Искры', year: '2022', type: 'Сингл', cover: 'https://avatars.yandex.net/get-music-content/4408207/a3c0cf7e.a.20564532-1/400x400' },
+    { title: 'Фотоплёнка', year: '2022', type: 'Сингл', cover: 'https://avatars.yandex.net/get-music-content/5509022/6e0c73bc.a.18959193-1/400x400' },
+    { title: 'Джульетта', year: '2021', type: 'Сингл', cover: 'https://avatars.yandex.net/get-music-content/4296916/a7d86ae6.a.17863374-1/400x400' },
   ];
 
   const socials = [
-    { name: 'Instagram', icon: 'Instagram', url: '#' },
-    { name: 'YouTube', icon: 'Youtube', url: '#' },
-    { name: 'Spotify', icon: 'Music', url: '#' },
-    { name: 'VK', icon: 'MessageCircle', url: '#' },
+    { name: 'Telegram', icon: 'Send', url: 'https://t.me/vladlurren' },
+    { name: 'VK', icon: 'Music', url: 'https://vk.com/artist/vladlurren' },
+    { name: 'YouTube', icon: 'Youtube', url: 'https://www.youtube.com/channel/UCHZHVq6x7LixivGJvvKgYmQ' },
+    { name: 'TikTok', icon: 'Video', url: 'https://www.tiktok.com/@vladlurren' },
   ];
 
   return (
@@ -137,42 +140,15 @@ const Index = () => {
           <div className="max-w-4xl mx-auto space-y-12">
             <div className="text-center space-y-4">
               <h2 className="text-5xl font-bold tracking-tight">Концерты</h2>
-              <p className="text-xl text-muted-foreground">Несмотря на молодость, он уже прошёл этап проб и ошибок. Он верит, что музыка должна быть честной, искренней и открытой людям. Считает важно проживать моменты не только самому, но и с поддержкой музыки.</p>
+              <p className="text-xl text-muted-foreground">Предстоящие выступления</p>
             </div>
-            <div className="space-y-4">
-              {concerts.map((concert, index) => (
-                <Card
-                  key={index}
-                  className="hover:shadow-lg transition-shadow duration-300 animate-fade-in"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <CardContent className="p-8">
-                    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                      <div className="space-y-2">
-                        <p className="text-sm text-muted-foreground">{concert.date}</p>
-                        <h3 className="text-2xl font-semibold">{concert.city}</h3>
-                        <p className="text-muted-foreground">{concert.venue}</p>
-                      </div>
-                      <div className="flex items-center gap-4">
-                        <span
-                          className={`text-sm px-4 py-2 rounded-full ${
-                            concert.status === 'Билеты в продаже'
-                              ? 'bg-primary text-primary-foreground'
-                              : 'bg-secondary text-secondary-foreground'
-                          }`}
-                        >
-                          {concert.status}
-                        </span>
-                        <Button variant="outline" className="rounded-full">
-                          Подробнее
-                          <Icon name="ArrowRight" size={16} className="ml-2" />
-                        </Button>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+            <Card className="animate-fade-in">
+              <CardContent className="p-12 text-center">
+                <Icon name="Calendar" size={48} className="mx-auto mb-4 text-muted-foreground" />
+                <h3 className="text-2xl font-semibold mb-2">В ближайшее время концертов не планируется</h3>
+                <p className="text-muted-foreground">Следите за обновлениями в социальных сетях</p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -192,8 +168,12 @@ const Index = () => {
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <CardContent className="p-8 space-y-4">
-                    <div className="aspect-square bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg flex items-center justify-center group-hover:from-primary/20 group-hover:to-primary/10 transition-all">
-                      <Icon name="Music" size={64} className="text-primary/40" />
+                    <div className="aspect-square bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg overflow-hidden">
+                      <img 
+                        src={release.cover} 
+                        alt={release.title}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     <div className="space-y-2">
                       <p className="text-sm text-muted-foreground">{release.type} • {release.year}</p>
