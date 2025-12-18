@@ -108,7 +108,7 @@ const Index = () => {
             </div>
             <div className="relative aspect-square lg:aspect-auto lg:h-[600px] overflow-hidden rounded-2xl animate-scale-in">
               <img
-                src="https://cdn.poehali.dev/projects/d13bad1c-ef31-485d-9fa6-a1af5000af89/files/b70c1765-0c46-42f9-bd02-63bd27c9acd7.jpg"
+                src="https://cdn.poehali.dev/projects/d13bad1c-ef31-485d-9fa6-a1af5000af89/files/34754ee1-793f-40f1-b551-ff9bcf02e0f8.jpg"
                 alt="Артист"
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
               />
