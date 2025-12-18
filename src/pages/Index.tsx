@@ -137,7 +137,7 @@ const Index = () => {
           <div className="max-w-4xl mx-auto space-y-12">
             <div className="text-center space-y-4">
               <h2 className="text-5xl font-bold tracking-tight">Концерты</h2>
-              <p className="text-xl text-muted-foreground">Предстоящие выступления</p>
+              <p className="text-xl text-muted-foreground">Несмотря на молодость, он уже прошёл этап проб и ошибок. Он верит, что музыка должна быть честной, искренней и открытой людям. Считает важно проживать моменты не только самому, но и с поддержкой музыки.</p>
             </div>
             <div className="space-y-4">
               {concerts.map((concert, index) => (
