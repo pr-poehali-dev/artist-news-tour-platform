@@ -90,9 +90,7 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
-                <h2 className="text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
-                  Имя<br />Артиста
-                </h2>
+                <h2 className="text-6xl lg:text-7xl font-bold tracking-tight leading-tight">VlaD LuRReN</h2>
                 <p className="text-xl text-muted-foreground max-w-md">
                   Музыкант, композитор, исполнитель
                 </p>
